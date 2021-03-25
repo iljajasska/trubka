@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <StackLayout x:Name="stacklayout" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="CornflowerBlue">
+        <Button x:Name="btns" BackgroundColor="White" />
+        <Entry Placeholder="Принимающая почта" x:Name="EntryRecipients" TextColor="Red"></Entry>
+        <Entry Placeholder="Тема сообщения" x:Name="EntrySubject" TextColor="Black"></Entry>
+        <Entry Placeholder="Кнопку ниже" x:Name="EntryBody" TextColor="Black"></Entry>
+        <Button Text="Отправить" x:Name="ButtonSend" Clicked="ButtonSend_Clicked" BackgroundColor="White"></Button>
+        <Button Text="Придумай за меня" x:Name="randombutton" Clicked="randombutton_Clicked" BackgroundColor="White"></Button>
+        <Picker TextColor="Black" Title="Выбор" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>
+                    Спасибо
+                </x:String>
+                <x:String>
+                    Можно 5ерку
+                </x:String>
+                <x:String>
+                    Оштбка 404
+                </x:String>
+                <x:String>
+                    10-11
+                </x:String>
+                <x:String>
+                    люблю Эрика!
+                </x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>
+</ContentPage>
