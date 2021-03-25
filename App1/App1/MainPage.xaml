@@ -1,33 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage" BackgroundColor="Beige"
+             Title="Поздравление другу">
 
-    <StackLayout x:Name="stacklayout" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="CornflowerBlue">
-        <Button x:Name="btns" BackgroundColor="White" />
-        <Entry Placeholder="Принимающая почта" x:Name="EntryRecipients" TextColor="Red"></Entry>
-        <Entry Placeholder="Тема сообщения" x:Name="EntrySubject" TextColor="Black"></Entry>
-        <Entry Placeholder="Кнопку ниже" x:Name="EntryBody" TextColor="Black"></Entry>
-        <Button Text="Отправить" x:Name="ButtonSend" Clicked="ButtonSend_Clicked" BackgroundColor="White"></Button>
-        <Button Text="Придумай за меня" x:Name="randombutton" Clicked="randombutton_Clicked" BackgroundColor="White"></Button>
-        <Picker TextColor="Black" Title="Выбор" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+    <StackLayout x:Name="stacklayout" VerticalOptions="CenterAndExpand" BackgroundColor="Beige">
+        <Picker TextColor="Black" Title="Выбрать почту" x:Name="pickert" SelectedIndexChanged="picker_SelectedIndexChanged">
             <Picker.Items>
                 <x:String>
-                    Спасибо
+                    jasskailja@gmail.com
                 </x:String>
                 <x:String>
-                    Можно 5ерку
+                    maksimsimakov@gmail.com
                 </x:String>
                 <x:String>
-                    Оштбка 404
+                    denispetrov@gmail.com
                 </x:String>
                 <x:String>
-                    10-11
+                    danielparpauts@gmail.com
                 </x:String>
                 <x:String>
-                    люблю Эрика!
+                    kristinapankova@gmail.com
                 </x:String>
             </Picker.Items>
         </Picker>
+        <Entry Placeholder="Тема сообщения" x:Name="EntrySubject" TextColor="Black"></Entry>
+        <Picker TextColor="Black" Title="Выбрать поздравление" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>
+                    Поздравляю с днюхой!
+                </x:String>
+                <x:String>
+                    Поздравляю с 8 марта!
+                </x:String>
+                <x:String>
+                    Поздравляю с новым годом!
+                </x:String>
+                <x:String>
+                    Поздравляю с пасхой!
+                </x:String>
+                <x:String>
+                    Поздравляю с чем то еще!
+                </x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Рандом" x:Name="randombutton" Clicked="randombutton_Clicked" BackgroundColor="White"></Button>
+        <Button Text="Отправить" x:Name="ButtonSend" Clicked="ButtonSend_Clicked" BackgroundColor="White"></Button>
     </StackLayout>
 </ContentPage>

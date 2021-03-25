@@ -11,7 +11,6 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
-        Random rnd;
         public MainPage()
         {
             InitializeComponent();
@@ -27,14 +26,13 @@ namespace App1
             var emailMessenger = CrossMessaging.Current.EmailMessenger;
             if (emailMessenger.CanSendEmail)
             {
-                emailMessenger.SendEmail($"{picker.SelectedItem}", $"{EntrySubject}", $"{EntryRecipients}");
+                emailMessenger.SendEmail($"{picker.SelectedItem}", $"{EntrySubject}");
             }
             ButtonSend.Text = "Отправлено!";
         }
 
         private void randombutton_Clicked(object sender, EventArgs e)
         {
-            picker.Title = "Вы выбрали: " + picker.Items[picker.SelectedIndex];
             if (picker.SelectedIndex == 0)
             {
                 EntrySubject.Text = $"{picker}";
